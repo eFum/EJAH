@@ -1,5 +1,9 @@
-//1.2.1 Creation of the account class
+// 1.2.1 Creation of the account class
 package components;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 
 public abstract class Account {
 	// Attributes
@@ -30,23 +34,23 @@ public abstract class Account {
     public double getBalance() {
         return balance;
     }
-/*
-    public void setBalance(double amount, FlowType flowType) {
-        // Modify balance based on the type of flow (transfer, credit, debit)
-        switch (flowType) {
-            case TRANSFER:
-                // Logic for transfer
-                break;
-            case CREDIT:
-                // Logic for credit
-                break;
-            case DEBIT:
-                // Logic for debit
-                break;
-            // Add more cases as needed
+    
+    public void setBalance(Flow flow, boolean effect) {
+        double flowAmount = effect ? flow.getAmount() : -flow.getAmount();
+
+        if (flow instanceof Transfer) {
+            Transfer transfer = (Transfer) flow;
+            if (transfer.getTargetAccountNumber() == this.getAccountNumber()) {
+                this.balance += flowAmount;
+            } else if (transfer.getIssuingAccountNumber() == this.getAccountNumber()) {
+                this.balance -= flowAmount;
+            }
+        } else {
+            this.balance += flowAmount;
         }
     }
-*/
+    
+    
     public int getAccountNumber() {
         return accountNumber;
     }

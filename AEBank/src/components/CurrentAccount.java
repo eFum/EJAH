@@ -1,4 +1,4 @@
-//1.2.2 Creation of the CurrentAccount
+// 1.2.2 Creation of the CurrentAccount
 package components;
 
 public class CurrentAccount extends Account {

@@ -1,4 +1,4 @@
-//1.2.2 Creation of the SavingsAccount
+// 1.2.2 Creation of the SavingsAccount
 package components;
 
 public class SavingsAccount extends Account {
