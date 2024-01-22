@@ -14,13 +14,15 @@ public abstract class Flow {
 
     // Constructor
     public Flow(String comment, double amount, int targetAccountNumber, boolean effect) {
-        this.comment = comment;
+        this.setComment(comment);
         this.amount = amount;
         this.targetAccountNumber = targetAccountNumber;
         this.effect = effect;
-        this.date = LocalDate.now().plusDays(2); // Operations are carried out 2 days after the creation of flows
+        // Operations are carried out 2 days after the creation of flows
+        this.setDate(LocalDate.now().plusDays(2));
     }
     
+    // Accessors and Mutators
     public double getAmount() {
         return this.amount;
     }
@@ -32,7 +34,41 @@ public abstract class Flow {
     public boolean getEffect(){
         return this.effect;
     }
-    // Accessors and Mutators
-    // (Include getters and setters for other attributes as needed)
 
+	public String getComment() {
+		return comment;
+	}
+
+	public void setComment(String comment) {
+		this.comment = comment;
+	}
+
+	public int getIdentifier() {
+		return identifier;
+	}
+
+	public void setIdentifier(int identifier) {
+		this.identifier = identifier;
+	}
+
+	public LocalDate getDate() {
+		return date;
+	}
+
+	public void setDate(LocalDate date) {
+		this.date = date;
+	}
+	
+	// toString method
+    @Override
+    public String toString() {
+        return "Flow{" +
+               "comment='" + comment + '\'' +
+               ", identifier=" + identifier +
+               ", amount=" + amount +
+               ", targetAccountNumber=" + targetAccountNumber +
+               ", effect=" + effect +
+               ", date=" + date +
+               '}';
+    }
 }

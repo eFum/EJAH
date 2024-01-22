@@ -47,4 +47,8 @@ public class Client {
                ", clientNumber=" + clientNumber +
                '}';
     }
+
+	public void setClientNumber(int clientNumber) {
+		this.clientNumber = clientNumber;
+	}
 }

@@ -7,5 +7,4 @@ public class Credit extends Flow {
 		super(comment, amount, targetAccountNumber, effect);
 		// TODO Auto-generated constructor stub
 	}
-    // No additional attributes or methods
 }

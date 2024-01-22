@@ -11,10 +11,8 @@ public class Transfer extends Flow {
         this.issuingAccountNumber = issuingAccountNumber;
     }
     
+    // Accessors and Mutators
     public int getIssuingAccountNumber() {
         return this.issuingAccountNumber;
     }
-
-    // Accessors and Mutators
-    // (Include getters and setters for additional attributes as needed)
 }

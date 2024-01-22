@@ -1,10 +1,6 @@
 // 1.2.1 Creation of the account class
 package components;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-
 public abstract class Account {
 	// Attributes
     protected String label;
@@ -35,6 +31,10 @@ public abstract class Account {
         return balance;
     }
     
+    public void setBalance(double balance) {
+    	this.balance = balance;
+    }
+    
     public void setBalance(Flow flow, boolean effect) {
         double flowAmount = effect ? flow.getAmount() : -flow.getAmount();
 
@@ -53,6 +53,10 @@ public abstract class Account {
     
     public int getAccountNumber() {
         return accountNumber;
+    }
+    
+    public void setAccountNumber(int accountNumber) {
+        this.accountNumber = accountNumber;
     }
 
     public Client getClient() {

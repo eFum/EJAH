@@ -1,0 +1,23 @@
+[
+    {
+        "type": "Debit",
+        "amount": 50,
+        "targetAccountNumber": 1
+    },
+    {
+        "type": "Credit",
+        "amount": 100.50,
+        "targetAccountNumber": "all current accounts"
+    },
+    {
+        "type": "Credit",
+        "amount": 1500,
+        "targetAccountNumber": "all savings accounts"
+    },
+    {
+        "type": "Transfer",
+        "amount": 50,
+        "targetAccountNumber": 2,
+        "issuingAccountNumber": 1
+    }
+]

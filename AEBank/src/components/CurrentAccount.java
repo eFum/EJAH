@@ -7,5 +7,4 @@ public class CurrentAccount extends Account {
 		super(label, client);
 		// TODO Auto-generated constructor stub
 	}
-    // No additional attributes or methods in this class
 }
